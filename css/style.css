@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+/* HEADER */
+header{    
+    padding: 20px 0 10px;
+    background-color: rgb(5, 126, 207);
+    color: white;
+    font-family: "lora", serif;
+    text-align: center;
+}
+
+.isologo_header {
+    width: 40%;
+}
+
+nav ul{    
+    list-style: none;
+    font-family: "montserrat", sans-serif;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(233, 201, 21);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* MAIN */
+main{
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+.frase{
+    margin: 0;
+    font-size: 20px;
+}
+
+.img_filam{
+    width: 40%;
+}
+
+main section h2{
+    margin: 0;
+    padding: 10px 0;
+    font-family: "lora", serif;
+    font-size: 2rem;
+    color:rgb(165, 3, 41)
+}
+
+section{
+    padding: 10px;
+}
+
+.productos_container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 10px;    
+}
+
+#contacto input{
+    width: 300px;    
+    border: 1px solid #720606;
+    border-radius: 5px;    
+    cursor: pointer;
+}
+#contacto textarea {
+    width: 90%;
+    height: 150px;
+    border: 1px solid #720606;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(250, 186, 59);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #720606;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(108, 105, 105);
+    margin-top: 10px;
+}
+
+.insta_footer{
+    width: 40px;
+    height: 40px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {   
+    .isologo_header{
+        width: 60%;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.5rem;
+    }
+    .img_filam{
+        width: 60%;
+    }
+    .productos_container{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .productos_container{
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}

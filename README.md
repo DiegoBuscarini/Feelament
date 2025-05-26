@@ -1,0 +1,27 @@
+Este proyecto es una página web básica desarrollada como parte de un curso de Front-End. La página está estructurada con HTML semántico y utiliza las etiquetas <header>, <main>, y <footer> para organizar el contenido. El objetivo es aprender a crear la estructura básica de una página web y prepararla para futuras mejoras con CSS y JavaScript.
+
+1
+1.1: Agregué las etiquetas <header>, <nav>, <main>, <section>, y <footer>.
+1.2: Agregué este README.md
+
+2
+2.1: Agregué una UL con 3 items y sus enlaces internos
+2.2: Inserté una imagen en el header
+
+3 
+3.1: Creé un Form de contacto y lo relacioné a Formspree > https://formspree.io/f/xzzewbbg
+3.2: Subí la página a Netlify > https://brilliant-concha-545795.netlify.app/
+
+4
+4.1: creé el archivo style.css y le agregué color de fondo y de fuentes al header y al footer
+4.2: cambié el estilo de la UL (fuente, fondo, decoración)
+
+5
+5.1: Organicé los contenedores y las imágenes de los productos con el uso de flex
+5.2: alineé textos e imagenes y emprolijé espacios
+
+6
+6.1 Acomodé el footer
+
+7
+7.1 Media queries

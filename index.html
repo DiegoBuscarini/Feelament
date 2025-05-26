@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEELAMENT</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Isologo Feelament/Iso Feelament.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img class="isologo_header" src="images/Isologo Feelament/Isologo Feelament.png" alt="FEELAMENT">
+        </div>
+        <h1>Filamentos para impresoras 3D</h1>
+        <nav>
+            <ul>
+                <li><a href="#filamentos">Filamentos</a></li>
+                <li><a href="#impresoras">Impresoras 3D</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p class="frase"><strong>FEELAMENT</strong><br>te trae los mejores filamentos y la mayor variedad para tus diseños en 3D<p>
+            <img class=img_filam src="images/filamentos.jfif" alt="filamentos">
+        </section>
+        <section id="filamentos">
+            <h2>Filamentos</h2>
+            <div class="productos_container">
+                <div class="producto">
+                    <img src="images/filamentos/pla.jpg" alt="pla">
+                    <p>PLA</p>
+                </div>
+                <div>
+                    <img src="images/filamentos/abs.jpg" alt="abs">
+                    <p>ABS</p>
+                </div>
+                <div class="producto">           
+                    <img src="images/filamentos/flex.jpg" alt="flex">
+                    <p>FLEX</p>
+                </div>
+                 <div class="producto">
+                    <img src="images/filamentos/petg.jpg" alt="petg">
+                    <p>PETG</p>
+                </div>
+                <div class="producto">                    
+                    <img src="images/filamentos/hips.jpg" alt="hips">
+                    <p>HIPS</p>
+                </div>
+                <div class="producto">                    
+                    <img src="images/filamentos/nylon.jpg" alt="nylon">
+                    <p>Nylon MAX</p>
+                </div>
+            </div>
+        </section>
+        <section id="impresoras">
+            <h2>Impresoras 3D</h2>
+            <div class="productos_container">
+                <div class="producto">
+                    <img src="images/impresoras/creality_ender3.jpg" alt="ender3">
+                    <p>Creality Ender 3 Neo</p>
+                </div>
+                <div class="producto">
+                    <img src="images/impresoras/artillery.jpg" alt="artillery">
+                    <p>Artillery Genius Pro</p>
+                </div>
+                <div class="producto">
+                    <img src="images/impresoras/apolo.jpg" alt="apolo">
+                    <p>Apolo Pro Plus</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <form id="contacto" action="https://formspree.io/f/xzzewbbg" method="POST">
+                <label for="nombre">Nombre </label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Dejanos tu email </label>
+                <input type="email" name="email">
+                <label for="mensaje">Escribinos un mensaje</label>
+                <textarea name="message" rows="4" cols="50" required></textarea>
+                <button type="submit" aria-label="Enviar mensaje de contacto">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h5>Todos los derechos reservados Diego Buscarini Design&#169</h5>
+        <a href="https://www.instagram.com/diego.buscarini" target="_blank"><img class="insta_footer" src="images/instagram/instagram_orig.png" alt="Instagram Diego Buscarini"></a>
+    </footer>
+</body>
+</html>
