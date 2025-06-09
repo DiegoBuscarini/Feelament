@@ -30,3 +30,5 @@ Este proyecto es una página web básica desarrollada como parte de un curso de 
 8.1 creé la carpeta "js"
 8.2 creé el archivo codigo.js
 8.3 creé la rama javascript_1
+8.4 primer uso de JS y concatenaciones
+8.5 uso de alert
