@@ -32,3 +32,6 @@ Este proyecto es una página web básica desarrollada como parte de un curso de 
 8.3 creé la rama javascript_1
 8.4 primer uso de JS y concatenaciones
 8.5 uso de alert
+
+9
+9.1 instalé y usé Quokka
