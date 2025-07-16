@@ -23,7 +23,8 @@ nav ul{
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
+    align-items: center;
 }
 
 nav ul li a{
@@ -31,6 +32,11 @@ nav ul li a{
     color: rgb(233, 201, 21);
     font-weight: bold;
     font-size: 1.5rem;
+    width: auto;
+}
+
+.carrito_icono {
+    width: 80%;
 }
 
 /* MAIN */

@@ -38,3 +38,4 @@ Este proyecto es una página web básica desarrollada como parte de un curso de 
 10
 10.1 creo el archivo codigo.js
 10.2 incluyo la información de la REST API en ese .js
+10.3 creo la carpeta carrito y el archivo carrito html
