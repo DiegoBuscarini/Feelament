@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEELAMENT</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -11,11 +11,143 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-     <header>
+  <header>
         <div>
-            <a href="../index.html"><img class="isologo_header" src="../images/isologo Feelament/Isologo Feelament.png" alt="FEELAMENT"></a>            
+            <a href="../index.html"><img class="isologo_header" src="../images/isologo Feelament/Isologo Feelament.png" alt="FEELAMENT"></a>
         </div>
-        <h1>Carrito de compras</h1>        
+        <h1>Carrito de compras</h1>                    
     </header>
+
+  <main>
+    <section id="carrito-contenedor">
+      <h2>Productos en el carrito</h2>
+      <div id="lista-carrito"></div>
+      <p id="total-carrito"><strong>Total: $0</strong></p>
+      <button id="vaciar-carrito">Vaciar carrito</button>
+      <button id="finalizar-compra">Finalizar compra</button>
+    </section>
+  </main>
+
+  <footer>
+    <h5>Todos los derechos reservados Diego Buscarini Design&#169</h5>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const listaCarrito = document.getElementById("lista-carrito");
+      const totalCarrito = document.getElementById("total-carrito");
+      const btnVaciar = document.getElementById("vaciar-carrito");
+      const btnFinalizar = document.getElementById("finalizar-compra");
+
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+      // Agrupar productos por ID para manejar cantidades
+      let carritoConCantidad = [];
+      carrito.forEach((producto) => {
+        const existe = carritoConCantidad.find(p => p.id === producto.id);
+        if (existe) {
+          existe.cantidad++;
+        } else {
+          carritoConCantidad.push({ ...producto, cantidad: 1 });
+        }
+      });
+
+      const guardarCarrito = () => {
+        // Guardamos cada unidad individual (como en tu lógica original)
+        const carritoPlano = carritoConCantidad.flatMap(p => Array(p.cantidad).fill({ ...p }));
+        localStorage.setItem("carrito", JSON.stringify(carritoPlano));
+      };
+
+      const renderizarCarrito = () => {
+        listaCarrito.innerHTML = "";
+        let total = 0;
+
+        if (carritoConCantidad.length === 0) {
+          listaCarrito.innerHTML = "<p>Tu carrito está vacío.</p>";
+          totalCarrito.innerHTML = "<strong>Total: $0</strong>";
+          return;
+        }
+
+        carritoConCantidad.forEach((producto, index) => {
+          const item = document.createElement("div");
+          item.classList.add("item-carrito");
+
+          const subtotal = producto.price * producto.cantidad;
+          total += subtotal;
+
+          item.innerHTML = `
+            <img src="${producto.images[0]}" alt="${producto.title}" width="80">
+            <h3>${producto.title}</h3>
+            <p>Precio unitario: $${producto.price}</p>
+            <div>
+              <button class="restar" data-index="${index}">-</button>
+              <span><strong>${producto.cantidad}</strong></span>
+              <button class="sumar" data-index="${index}">+</button>
+            </div>
+            <p>Subtotal: $${subtotal}</p>
+            <button class="eliminar-producto" data-index="${index}">Eliminar</button>
+            <hr>
+          `;
+
+          listaCarrito.appendChild(item);
+        });
+
+        totalCarrito.innerHTML = `<strong>Total: $${total}</strong>`;
+        activarBotones();
+      };
+
+      const activarBotones = () => {
+        document.querySelectorAll(".sumar").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const index = btn.getAttribute("data-index");
+            carritoConCantidad[index].cantidad++;
+            guardarCarrito();
+            renderizarCarrito();
+          });
+        });
+
+        document.querySelectorAll(".restar").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const index = btn.getAttribute("data-index");
+            if (carritoConCantidad[index].cantidad > 1) {
+              carritoConCantidad[index].cantidad--;
+            } else {
+              carritoConCantidad.splice(index, 1);
+            }
+            guardarCarrito();
+            renderizarCarrito();
+          });
+        });
+
+        document.querySelectorAll(".eliminar-producto").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const index = btn.getAttribute("data-index");
+            carritoConCantidad.splice(index, 1);
+            guardarCarrito();
+            renderizarCarrito();
+          });
+        });
+      };
+
+      btnVaciar.addEventListener("click", () => {
+        carritoConCantidad = [];
+        guardarCarrito();
+        renderizarCarrito();
+      });
+
+      btnFinalizar.addEventListener("click", () => {
+        if (carritoConCantidad.length === 0) {
+          alert("Tu carrito está vacío.");
+          return;
+        }
+        alert("¡Gracias por tu compra!");
+        carritoConCantidad = [];
+        guardarCarrito();
+        renderizarCarrito();
+      });
+
+      renderizarCarrito();
+    });
+  </script>
 </body>
 </html>

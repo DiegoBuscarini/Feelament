@@ -39,3 +39,12 @@ Este proyecto es una página web básica desarrollada como parte de un curso de 
 10.1 creo el archivo codigo.js
 10.2 incluyo la información de la REST API en ese .js
 10.3 creo la carpeta carrito y el archivo carrito html
+
+11
+11.1 mejoro codigo.js
+11.2 trabajo sobre el archivo carrito.html
+11.3 creo la rama jsSmartphones
+
+12
+12.1 agregué manejo de cantidades de productos agregados al carrito de compras, tanto para sumar como para restar
+12.2 mejoré el style.css y modifiqué codigo.js para que los productos traidos de la REST API se vieran armónicos en el index.html

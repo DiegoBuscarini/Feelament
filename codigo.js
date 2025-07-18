@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded" , () => {
     fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      let contenedorProductos = document.getElementById("contenedor-productos");
+     // let contenedorProductos = document.getElementById("contenedor-productos");
+     let contenedorProductos = document.querySelector(".productos-grid");
       for (const producto of data.products){
           let tarjetaProducto = document.createElement("article");
           tarjetaProducto.classList.add("tarjeta-producto");

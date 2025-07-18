@@ -36,7 +36,12 @@ nav ul li a{
 }
 
 .carrito_icono {
-    width: 80%;
+    width: 50%;
+}
+
+.home_icono {
+    width: 3%;
+    
 }
 
 /* MAIN */
@@ -51,8 +56,12 @@ main{
     font-size: 20px;
 }
 
-.img_filam{
+/* .img_filam{
     width: 40%;
+} */
+
+.img_iPhone{
+    width: 20%;
 }
 
 main section h2{
@@ -73,6 +82,62 @@ section{
     gap: 20px;
     font-weight: bold;
     flex-wrap: wrap;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.tarjeta-producto {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 240px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-producto img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.titulo-producto {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.tarjeta-producto p {
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+.tarjeta-producto button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-producto button:hover {
+  background-color: #444;
 }
 
 #contacto {
