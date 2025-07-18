@@ -41,6 +41,7 @@
 
       let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+      // Agrupar productos por ID para manejar cantidades
       let carritoConCantidad = [];
       carrito.forEach((producto) => {
         const existe = carritoConCantidad.find(p => p.id === producto.id);
@@ -52,7 +53,7 @@
       });
 
       const guardarCarrito = () => {
-      
+        // Guardamos cada unidad individual (como en tu lógica original)
         const carritoPlano = carritoConCantidad.flatMap(p => Array(p.cantidad).fill({ ...p }));
         localStorage.setItem("carrito", JSON.stringify(carritoPlano));
       };

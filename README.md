@@ -48,3 +48,7 @@ Este proyecto es una página web básica desarrollada como parte de un curso de 
 12
 12.1 agregué manejo de cantidades de productos agregados al carrito de compras, tanto para sumar como para restar
 12.2 mejoré el style.css y modifiqué codigo.js para que los productos traidos de la REST API se vieran armónicos en el index.html
+
+13
+13.1 agrego la sección "reseñas" en index.html
+13.2 trabajo en los estilos para esta sección según lo solicitado en el apartado "ejercicios prácticos" de la clase 7
